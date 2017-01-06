@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/title_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Save Recipe"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimary"
+                />
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:theme="@style/SpinnerEdit"
+                >
+
+                <EditText
+                    android:id="@+id/recipe_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Recipe Name"
+                    android:inputType="textCapWords"
+                    android:maxLines="1"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+          <Spinner
+              android:id="@+id/recipetype_spn"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:theme="@style/SpinnerEdit"
+              android:layout_marginTop="8dp"
+              android:layout_marginBottom="8dp"></Spinner>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:theme="@style/SpinnerEdit">
+
+                <EditText
+                    android:id="@+id/ingredients_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Ingredients"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:theme="@style/SpinnerEdit">
+
+                <EditText
+                    android:id="@+id/steps_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Steps"
+                    android:inputType="textCapWords"
+                    android:maxLines="1"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    android:scrollbars="vertical"
+                    />
+            </android.support.design.widget.TextInputLayout>
+
+         <!--   <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:theme="@style/SpinnerEdit">
+
+                <EditText
+                    android:id="@+id/medicine_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Medicine"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    android:scrollbars="vertical"/>
+            </android.support.design.widget.TextInputLayout>-->
+          <!--  <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:theme="@style/SpinnerEdit">
+
+                <EditText
+                    android:id="@+id/description_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Description"
+                    android:inputType="textMultiLine"
+                    android:maxLines="2"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    android:scrollbars="vertical"/>
+            </android.support.design.widget.TextInputLayout>
+-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="20dp"
+                android:gravity="center">
+            <ProgressBar
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/save_pb"
+                android:visibility="gone"
+                android:layout_gravity="center"/>
+            <Button
+                android:id="@+id/save_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Save"
+                android:layout_marginBottom="10dp"
+                android:textColor="#FFFFFF" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
